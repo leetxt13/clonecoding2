@@ -244,3 +244,25 @@ button:focus {
   background-color: var(--color-primary);
   filter: brightness(150%); /*배경색 밝기 변경*/
 }
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+  margin-bottom: 15px;
+}
+.bar__bg {
+  background-color: var(--color-primary-variant);
+  width: 100%;
+  height: 3px;
+  margin: auto;
+}
+.bar__metadata {
+  display: flex;
+  justify-content: space-between;
+}
+.bar__value {
+  background-color: var(--color-accent);
+  height: 3px;
+}
