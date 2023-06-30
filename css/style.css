@@ -173,10 +173,23 @@ button:focus {
   cursor: default;
   user-select: none;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
-  flex-grow: 1;
+  white-space: nowrap;
+  min-width: 200px;
 }
 .major:nth-of-type(1) {
   flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 30%;
+}
+.major:nth-of-type(2) {
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 30%;
+}
+.major:nth-of-type(3) {
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 30%;
 }
 .major__icon {
   font-size: 4rem;
@@ -313,4 +326,120 @@ button:focus {
 .category:hover .category__count {
   top: 5px;
   opacity: 1;
+}
+/*work -project*/
+
+/* .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.project {
+  position: relative;
+}
+.project__image {
+  position: absoulte;
+  width: 220px;
+  height: 220px;
+}
+
+.project__metadata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  background-color: brown;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  opacity: 0.4;
+}
+.project__title {
+  font-size: 1.2rem;
+}
+.project__content {
+  font-size: 0.9rem;
+} */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.project {
+  border-radius: 4px;
+  overflow: hidden; /*내부 이미지가 삐져나오지 않게*/
+  position: relative;
+}
+.project__metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 250ms ease-in;
+  transform: translateY(-10%);
+}
+.project__metadata:hover {
+  opacity: 0.7;
+  transform: translateY(0%);
+}
+.project__title:after {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0.5rem 0;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.project__image {
+  width: 100%;
+}
+
+/*testimonial*/
+.testimonials {
+  margin: 3rem;
+}
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.testimonial:nth-child(even) .testimonial__img {
+  order: 1;
+  /*testimonial의 짝수 자식요소 중에 img에 적용*/
+  /*order는 0부터 시작*/
+}
+.testimonial__bubble {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 5px 5px rgba(0, 98, 90, 0.4), 10px 10px rgba(0, 98, 90, 0.3),
+    15px 15px rgba(0, 98, 90, 0.2), 20px 20px rgba(0, 98, 90, 0.1),
+    25px 25px rgba(0, 98, 90, 0.05);
+  white-space: nowrap;
+}
+.testimonial__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  box-shadow: 0 20px 20px rgba(8, 13, 17, 0.7);
+}
+.testimonial__bubble__name {
+  color: var(--color-accent);
+  font-weight: bold;
+  filter: brightness(70%);
 }
