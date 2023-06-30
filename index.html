@@ -42,7 +42,7 @@
         />
         <h1 class="header__logo__title"><a href="#">JoyLee</a></h1>
       </div>
-      <nav>
+      <nav class="header__nav">
         <ul class="header__menu">
           <li><a class="header__menu__item active" href="#home">Home</a></li>
           <li><a class="header__menu__item" href="#about">About</a></li>
@@ -408,28 +408,39 @@
 
       <!-- Arrow up -->
       <aside>
-        <a href="#home" title="back to top">
+        <a class="arrow-up" href="#home" title="back to top">
           <i class="fa-sharp fa-solid fa-arrow-up"></i>
         </a>
       </aside>
     </main>
     <!-- footer -->
     <footer id="contact" class="section">
-      <h2 class="title">Let's talk</h2>
-      <p class="description">leetxt13@naver.com</p>
-      <ul>
-        <li>
-          <a href="tel:010-2460-8538" title="전화번호" target="_blank"
-            ><i class="fa-solid fa-phone"></i
-          ></a>
-        </li>
-        <li>
-          <a href="mailto:leetxt13@naver.com" title="이메일" target="_blank">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-        </li>
-      </ul>
-      <p>2023 JoyLee Homepage All right reserved</p>
+      <div class="max-container">
+        <h2 class="title">Let's talk</h2>
+        <p class="description">leetxt13@naver.com</p>
+        <ul class="contact__links">
+          <li>
+            <a
+              class="contact__link"
+              href="tel:010-2460-8538"
+              title="전화번호"
+              target="_blank"
+              ><i class="fa-solid fa-phone"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="mailto:leetxt13@naver.com"
+              title="이메일"
+              target="_blank"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+        <p>2023 JoyLee Homepage All right reserved</p>
+      </div>
     </footer>
   </body>
 </html>
