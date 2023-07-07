@@ -1,24 +1,36 @@
 "use strict";
 
-const buttons = document.querySelector(".categories");
+const categories = document.querySelector(".categories");
 const projectImgs = document.querySelectorAll(".project");
-buttons.addEventListener("click", (event) => {
-  console.log(event.target.dataset.filter);
+const realBtns = document.querySelectorAll(".category");
+
+categories.addEventListener("click", (event) => {
   const filter = event.target.dataset.filter;
+  handleActiveSelection(event.target);
+  filterProjects(filter);
+});
+
+function handleActiveSelection(target) {
+  if (target.nodeName === "BUTTON") {
+    const active = document.querySelector(".category--selected");
+    active.classList.remove("category--selected");
+    target.classList.add("category--selected");
+  }
+}
+
+function filterProjects(filter) {
+  if (filter === undefined) {
+    return;
+  }
   projectImgs.forEach((img) => {
     img.classList.add("anim-out");
-    if (filter === "*") {
-      projectImgs.forEach((img) => {
-        img.classList.remove("hide");
-      });
-    }
-    if (img.dataset.id !== filter && filter !== "*") {
-      img.classList.add("hide");
-    } else if (img.dataset.id === filter) {
+    if (filter === "*" || filter === img.dataset.id) {
       img.classList.remove("hide");
+    } else {
+      img.classList.add("hide");
     }
     setTimeout(() => {
       img.classList.remove("anim-out");
-    }, 200);
+    }, 250);
   });
-});
+}
