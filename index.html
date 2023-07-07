@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- javascript -->
     <script src="src/main.js" defer></script>
+    <script src="src/projects.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -205,29 +206,39 @@
           <p class="description">Projects</p>
           <ul class="categories">
             <li>
-              <button class="category category--selected">
-                All<span class="category__count">12</span>
+              <button class="category category--selected" data-filter="*">
+                All<span class="category__count" data-filter="*">12</span>
               </button>
             </li>
             <li>
-              <button class="category">
-                birth<span class="category__count hide">4</span>
+              <button class="category" data-filter="birth">
+                birth<span class="category__count hide" data-filter="birth"
+                  >4</span
+                >
               </button>
             </li>
             <li>
-              <button class="category">
-                childcare<span class="category__count hide">4</span>
+              <button class="category" data-filter="childcare">
+                childcare<span
+                  class="category__count hide"
+                  data-filter="childcare"
+                  >4</span
+                >
               </button>
             </li>
             <li>
-              <button class="category">
-                dailylife<span class="category__count hide">4</span>
+              <button class="category" data-filter="dailylife">
+                dailylife<span
+                  class="category__count hide"
+                  data-filter="dailylife"
+                  >4</span
+                >
               </button>
             </li>
           </ul>
           <ul class="projects">
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="birth">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/birth1_fixed.png"
@@ -239,8 +250,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="birth">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/birth2_fixed.png"
@@ -252,8 +263,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="birth">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/birth3_fixed.png"
@@ -265,8 +276,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="birth">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/birth4_fixed.png"
@@ -278,8 +289,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="childcare">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/childcare1_fixed.png"
@@ -291,8 +302,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="childcare">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/childcare2_fixed.png"
@@ -304,8 +315,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="childcare">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/childcare3_fixed.png"
@@ -317,8 +328,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="childcare">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/childcare4_fixed.png"
@@ -330,8 +341,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="dailylife">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/life1_fixed.png"
@@ -343,8 +354,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="dailylife">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/life2_fixed.png"
@@ -356,8 +367,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="dailylife">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/life3_fixed.png"
@@ -369,8 +380,8 @@
                 </div>
               </a>
             </li>
-            <li class="project">
-              <a href="#" target="_blank">
+            <li class="project" data-id="dailylife">
+              <a target="_blank">
                 <img
                   class="project__image"
                   src="img/life4_fixed.png"
