@@ -31,10 +31,11 @@
     <!-- javascript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/intersectionObserver.js" defer></script>
   </head>
   <body>
     <!-- header -->
-    <header class="header">
+    <header class="header" class="section">
       <div class="header__logo">
         <img
           class="header__logo__img"
@@ -45,14 +46,37 @@
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a class="header__menu__item active" href="#home">Home</a></li>
-          <li><a class="header__menu__item" href="#about">About</a></li>
-          <li><a class="header__menu__item" href="#skills">Skills</a></li>
-          <li><a class="header__menu__item" href="#work">Work</a></li>
           <li>
-            <a class="header__menu__item" href="#testimonials">Testimonials</a>
+            <a class="header__menu__item active" href="#home" data-id="#home"
+              >Home</a
+            >
           </li>
-          <li><a class="header__menu__item" href="#contact">Contact</a></li>
+          <li>
+            <a class="header__menu__item" href="#about" data-id="#about"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#skills" data-id="#skills"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#work" data-id="#work">Work</a>
+          </li>
+          <li>
+            <a
+              class="header__menu__item"
+              href="#testimonials"
+              data-id="#testimonials"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a class="header__menu__item" href="#contact" data-id="contact"
+              >Contact</a
+            >
+          </li>
         </ul>
       </nav>
       <button class="header__toggleBtn" aria-label="navigation menu toggle">
