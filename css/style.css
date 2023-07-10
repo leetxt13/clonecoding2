@@ -123,6 +123,7 @@ button:focus {
 /*home*/
 
 #home {
+  position: relative; /*svg때문에 바꿔줌*/
   background-color: var(--color-primary);
   color: var(--color-text);
   padding: 5rem 1rem;
@@ -165,6 +166,35 @@ button:focus {
   /* border: 2px solid var(--color-accent); */
   outline: 2px solid var(--color-accent);
   color: var(--color-text);
+}
+/*home divider*/
+.home__divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.home__divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.home__divider .shape-fill {
+  fill: #ffffff;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .home__divider svg {
+    width: calc(144% + 1.3px);
+    height: 56px;
+  }
 }
 
 /*about*/
@@ -242,13 +272,15 @@ button:focus {
 }
 /*skills*/
 #skills {
+  position: relative;
   background-color: var(--color-primary-variant);
   color: var(--color-text);
 }
 .skills-gridContainer {
   display: grid;
   grid-template-columns: 6fr 4fr; /*6:4비율*/
-  margin: 2rem 3rem;
+  margin: 3rem 3rem;
+  margin-bottom: 3rem;
   border-radius: 8px;
   overflow: hidden; /*자식요소(배경색)가 삐져나온 것 숨김*/
   box-shadow: 3px 6px 49px -1px rgba(161, 28, 242, 0.86);
@@ -294,6 +326,35 @@ button:focus {
 .bar__value {
   background-color: var(--color-accent);
   height: 3px;
+}
+/*skills divider*/
+.skills__divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.skills__divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.skills__divider .shape-fill {
+  fill: var(--color-primary);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .skills__divider svg {
+    width: calc(156% + 1.3px);
+    height: 57px;
+  }
 }
 /*work*/
 
@@ -486,6 +547,7 @@ button:focus {
 }
 /*footer*/
 #contact {
+  position: relative;
   background-color: var(--color-primary);
   color: var(--color-text);
 }
@@ -502,6 +564,35 @@ button:focus {
 }
 .contact__link:hover {
   color: var(--color-accent);
+}
+
+/*contact divider*/
+.contact__divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.contact__divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.contact__divider .shape-fill {
+  fill: #ffffff;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .contact__divider svg {
+    width: calc(100% + 1.3px);
+    height: 118px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -523,6 +614,7 @@ button:focus {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
+
   .majors {
     flex-direction: column;
     gap: 2rem;
