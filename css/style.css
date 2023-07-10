@@ -16,6 +16,9 @@
   --size-max-width: 1200px;
 }
 /*공통속성 정의*/
+html {
+  scroll-behavior: smooth;
+} /*nav메뉴 클릭시 부드럽게 스크롤링*/
 * {
   box-sizing: border-box;
 }
