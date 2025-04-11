@@ -46,3 +46,15 @@ headerMenu.addEventListener("click", (event) => {
     headerMenu.classList.remove("open");
   }
 });
+
+// projects 사진들 grid 조정
+
+const btns = document.querySelector(".projects__btns")
+const projects = document.querySelector(".projects")
+btns.addEventListener("click",(e)=>{
+  if(e.target.nodeName!=="BUTTON"){
+    return;
+  }
+  projects.style.gridTemplateColumns = `repeat(${e.target.dataset.gridline},1fr)`
+  }
+)
